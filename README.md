@@ -2,7 +2,7 @@
 
 環境
 ----
-* [Wordpress](https://ja.wordpress.org/)
+* [Wordpress(最新版)](https://ja.wordpress.org/)
 * [Docker](https://www.docker.com/)
 
 環境構築
@@ -13,8 +13,10 @@
 起動
 ----
 
-docker-compose.ymlがあるディレクトリにてコマンドで下記を実行(wpフォルダが作られます)
+docker-compose.ymlがあるディレクトリにてターミナルで下記を実行(wpフォルダが作られます)
 ```
+# プロジェクトディレクトリへ移動
+cd ~/wordpress-docker
 # 起動
 docker-compose up -d
 ```
@@ -22,7 +24,12 @@ docker-compose up -d
 http://localhost:8000/
 にアクセスできればOK
 
-その他
+```
+# おかしくなったら止めるなり再構築するなりする
+docker-compose stop
+```
+
+その他(開発者向け)
 ----
 ```
 # bash実行
