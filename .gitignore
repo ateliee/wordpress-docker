@@ -1,2 +1,25 @@
 .idea
-wp
+
+# ignore everything in the root except the "wp-content" directory.
+!wp/wp-content/
+
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory
+wp/wp-content/*
+!wp/wp-content/mu-plugins/
+!wp/wp-content/plugins/
+!wp/wp-content/themes/
+
+# ignore these plugins
+wp/wp-content/plugins/hello.php
+
+# ignore specific themes
+wp/wp-content/themes/twenty*/
+
+# ignore node dependency directories
+wp/node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
