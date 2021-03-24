@@ -29,6 +29,12 @@ http://localhost:8000/
 docker-compose stop
 ```
 
+追加プラグイン
+------------
+
+メール送信サーバーがないので[WP Mail SMTPプラグイン](https://ja.wordpress.org/plugins/wp-mail-smtp/)などを入れて
+Gmailなどで送信するといいかも
+
 その他(開発者向け)
 ----
 ```
