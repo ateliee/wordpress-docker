@@ -22,7 +22,7 @@ services:
       - ./wp:/var/www/html
       - ./infra/docker/wordpress/conf/php.ini:/usr/local/etc/php/php.ini
     ports:
-      - "8000:80"
+      - ${LOCAL_PORT:-8000}:80
     restart: always
     environment:
       WORDPRESS_DB_HOST: db:3306
