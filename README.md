@@ -10,13 +10,19 @@
 
 [こちら](https://docs.docker.jp/compose/install.html)を参考にdocker-composeを実行できる環境を整えてください。
 
+Get Start
+----
+
+```
+git clone git@github.com:ateliee/wordpress-docker.git
+cd ./wordpress-docker
+```
+
 起動
 ----
 
 docker-compose.ymlがあるディレクトリにてターミナルで下記を実行(wpフォルダが作られます)
 ```
-# プロジェクトディレクトリへ移動
-cd ~/wordpress-docker
 # 起動
 make build
 make up
@@ -26,7 +32,6 @@ http://localhost:8000/
 にアクセスできればOK
 
 ```
-# おかしくなったら止めるなり再構築するなりする
 make stop
 ```
 
