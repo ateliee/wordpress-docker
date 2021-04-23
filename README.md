@@ -18,7 +18,8 @@ docker-compose.ymlがあるディレクトリにてターミナルで下記を�
 # プロジェクトディレクトリへ移動
 cd ~/wordpress-docker
 # 起動
-docker-compose up -d
+make build
+make up
 ```
 
 http://localhost:8000/
@@ -26,21 +27,22 @@ http://localhost:8000/
 
 ```
 # おかしくなったら止めるなり再構築するなりする
-docker-compose stop
+make stop
 ```
 
-追加プラグイン
+メール確認
 ------------
 
-メール送信サーバーがないので[WP Mail SMTPプラグイン](https://ja.wordpress.org/plugins/wp-mail-smtp/)などを入れて
-Gmailなどで送信するといいかも
+[MailHog](https://github.com/mailhog/MailHog)を利用しています。下記でアクセスし送信されたメールを確認できます。
+
+http://localhost:8025/
 
 その他(開発者向け)
 ----
 ```
 # bash実行
-docker-compose exec wordpress bash
+make app
 # ログ確認
-docker-compose logs
-docker-compose logs --follow
+make logs
+make logs-watch
 ```
