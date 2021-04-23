@@ -1,4 +1,4 @@
-# wordpress環境構築
+# wordpress local環境構築テンプレ
 
 環境
 ----
